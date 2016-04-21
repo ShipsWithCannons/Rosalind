@@ -5,4 +5,4 @@ end
 user_input = gets.chomp
 
 split_input = user_input.split().map { |number| number.to_i() }
-puts probability_dominant(split_input[0], split_input[1], split_input[2])
+puts probability_dominant(split_input[0], split_input[1], split_input[2]).round(5)
