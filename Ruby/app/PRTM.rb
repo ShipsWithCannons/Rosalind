@@ -33,4 +33,5 @@ module Rosalind
   end
 end
 
-puts '%.3f' % Rosalind.problem_prtm("SKADYEK")
+user_input = gets.chomp
+puts '%.3f' % Rosalind.problem_prtm(user_input)
