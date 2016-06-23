@@ -26,7 +26,7 @@ module Rosalind
 
   def self.problem_prtm(aminoacids_string)
     aminoacids_string.
-      scan(/[ACDEFGHIKLMNPQRSTVWY]{1}/).
+      scan(/./).
       map { |residue| MONOISOTOPIC_MASS_BY_RESIDUE[residue] }.
       take_while { |aminoacid| aminoacid != "" }.
       inject(0){|sum,x| sum + x }
