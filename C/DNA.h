@@ -22,21 +22,19 @@ nucleobase_frequencies countACGT(const char *nucleotide)
         nucleobase = nucleotide[i];
         if isalnum(nucleobase)
         {
-            if (nucleobase == 'A')
+            switch(nucleobase)
             {
-                count->A += 1;
-            }
-            else if (nucleobase == 'C')
-            {
-                count->C += 1;
-            }
-            else if (nucleobase == 'G')
-            {
-                count->G += 1;
-            }
-            else if (nucleobase == 'T')
-            {
-                count->T += 1;
+                case 'A':
+                    count->A += 1;
+                    break;
+                case 'C':
+                    count->C += 1;
+                    break;
+                case 'G':
+                    count->G += 1;
+                    break;
+                default:
+                    count->T += 1;
             }
         }
     }
