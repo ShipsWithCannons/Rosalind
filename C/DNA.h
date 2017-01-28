@@ -9,13 +9,13 @@ typedef struct {
     uint8_t C;
     uint8_t G;
     uint8_t T;
-} uint8_t_container;
+} nucleobase_frequencies;
 
-uint8_t_container countACGT(const char *nucleotide)
+nucleobase_frequencies countACGT(const char *nucleotide)
 {
     uint16_t len = strlen(nucleotide);
     char nucleobase;
-    uint8_t_container *count = calloc(4, sizeof(uint8_t_container));
+    nucleobase_frequencies *count = calloc(4, sizeof(nucleobase_frequencies));
 
     for(uint16_t i = 0; i < len; i++)
     {
@@ -43,7 +43,7 @@ uint8_t_container countACGT(const char *nucleotide)
     return *count;
 }
 
-void output(const uint8_t_container result)
+void output(const nucleobase_frequencies result)
 {
     printf("%i %i %i %i\n", result.A, result.C, result.G, result.T);
 }
