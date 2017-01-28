@@ -28,7 +28,6 @@
         aminoacids_string.
           scan(/./).
           map { |residue| MONOISOTOPIC_MASS_BY_RESIDUE[residue] }.
-          take_while { |aminoacid| aminoacid != "" }.
           inject(0){ |sum, x| sum + x }
       end
     end
