@@ -15,7 +15,7 @@ nucleobase_frequencies countACGT(const char *nucleotide)
 {
     uint16_t len = strlen(nucleotide);
     char nucleobase;
-    nucleobase_frequencies *count = calloc(4, sizeof(nucleobase_frequencies));
+    nucleobase_frequencies *count = calloc(1, sizeof(nucleobase_frequencies));
 
     for(uint16_t i = 0; i < len; i++)
     {
