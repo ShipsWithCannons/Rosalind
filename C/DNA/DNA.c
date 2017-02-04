@@ -1,8 +1,14 @@
 #include "DNA.h"
+#include <assert.h>
 
 nucleobase_frequencies countACGT(const char *nucleotide)
 {
     uint16_t len = strlen(nucleotide);
+    if(len < 2)
+    {
+        printf("Input was empty\n");
+    }
+
     char nucleobase;
     nucleobase_frequencies *count = calloc(1, sizeof(nucleobase_frequencies));
 
