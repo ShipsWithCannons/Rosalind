@@ -22,7 +22,7 @@ nucleobase_frequencies countACGT(const char *nucleotide)
                 case 'G':
                     count->G += 1;
                     break;
-                default:
+                case 'T':
                     count->T += 1;
             }
         }
