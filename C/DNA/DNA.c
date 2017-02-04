@@ -1,5 +1,4 @@
 #include "DNA.h"
-#include <assert.h>
 
 nucleobase_frequencies countACGT(const char *nucleotide)
 {
