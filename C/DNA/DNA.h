@@ -1,3 +1,6 @@
+#ifndef DNA_H
+#define DNA_H
+
 #define _GNU_SOURCE
 #include <ctype.h>
 #include <stdint.h>
@@ -11,3 +14,5 @@ typedef struct {
     uint8_t G;
     uint8_t T;
 } nucleobase_frequencies;
+
+#endif
