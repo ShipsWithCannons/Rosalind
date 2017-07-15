@@ -27,7 +27,7 @@ class DnaNucleobaseSequence:
         }
         try:
             for nucleobase in self.sequence:
-                count[nucleobase] = count[nucleobase] + 1
+                count[nucleobase] += 1
             return count
         except KeyError:
             print("Invalid DNA nucleobase encountered. Aborting.")
